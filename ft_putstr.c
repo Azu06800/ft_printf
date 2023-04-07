@@ -3,27 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nhamdan <nhamdan@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: nihamdan <nihamdan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 13:51:21 by nhamdan           #+#    #+#             */
-/*   Updated: 2022/03/02 13:51:31 by nhamdan          ###   ########.fr       */
+/*   Created: 2023/04/03 10:34:34 by nihamdan          #+#    #+#             */
+/*   Updated: 2023/04/07 10:27:51 by nihamdan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr(char *str)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	if (s != NULL)
-		while (s[i])
-			write(1, &s[i++], 1);
+	count = 0;
+	if (str != NULL)
+	{
+		while (*str)
+		{
+			ft_putchar(*str);
+			str++;
+			count++;
+		}
+	}
 	else
 	{
 		ft_putstr("(null)");
 		return (6);
 	}
-	return (i);
+	return (count);
 }

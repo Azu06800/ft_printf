@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nhamdan <nhamdan@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: nihamdan <nihamdan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 13:50:44 by nhamdan           #+#    #+#             */
-/*   Updated: 2022/03/02 13:50:53 by nhamdan          ###   ########.fr       */
+/*   Created: 2023/04/04 15:54:17 by nihamdan          #+#    #+#             */
+/*   Updated: 2023/04/07 10:32:05 by nihamdan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 int	ft_putptr(void *ptr)
 {
-	int				count;
-	unsigned long	a;
+	size_t	tmp;
+	int		count;
 
-	a = (unsigned long) ptr;
-	count = ft_putstr("0x");
-	count += ft_putunbr_base(a, "0123456789abcdef");
+	tmp = (size_t) ptr;
+	count = 2;
+	write(1, "0x", 2);
+	count += ft_unsigned_base(tmp, "0123456789abcdef");
 	return (count);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nhamdan <nhamdan@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: nihamdan <nihamdan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 13:49:20 by nhamdan           #+#    #+#             */
-/*   Updated: 2022/03/02 13:49:34 by nhamdan          ###   ########.fr       */
+/*   Created: 2023/04/03 10:30:07 by nihamdan          #+#    #+#             */
+/*   Updated: 2023/04/04 19:08:21 by nihamdan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_putchar(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
